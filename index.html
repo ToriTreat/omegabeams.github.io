@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Omega Beams - Main</title>
-<link rel="icon" href="https://github.com/localgoth/localgoth.github.io/blob/main/OmegaBeamsLogo.jpg?raw=true" type="image/jpg">
+<link rel="icon" href="https://github.com/localgoth/localgoth.github.io/blob/main/Phantom%20bot.jpg?raw=true" type="image/jpg">
 
 <!-- Open Graph meta tags for embedding -->
-<meta property="og:title" content="Omega Beams - The #1 Site For Beaming">
-<meta property="og:description" content="Omega Beams provides the fastest and most secure beaming tools available. Experience blazing speed, advanced protection, and a beautiful dashboard built for reliability and precision.">
-<meta property="og:image" content="https://github.com/localgoth/localgoth.github.io/blob/main/src/OmegaBeamsBanner.png?raw=true">
-<meta property="og:url" content="https://E-boys.online/">
+<meta property="og:title" content="Omega Beams - The #1 Beaming Site">
+<meta property="og:description" content="Omega Beams is the 1# beaming site built to connect users through fast, secure, and powerful tools. Explore the dashboard, beam accounts, and join our growing community today.">
+<meta property="og:image" content="https://github.com/localgoth/localgoth.github.io/blob/main/src/PhantomBotButtonBackgrounds.png?raw=true">
+<meta property="og:url" content="https://omegabeamz.netlify.app/">
 <meta property="og:type" content="website">
 
 <style>
-/* General styling */
+/* (same CSS as your original — unchanged) */
 body {
     font-family: Arial, sans-serif;
     color: #fff;
@@ -23,8 +23,6 @@ body {
     padding: 0;
     overflow-x: hidden;
 }
-
-/* Video background */
 .video-background {
     position: fixed;
     top: 0;
@@ -34,8 +32,6 @@ body {
     object-fit: cover;
     z-index: -1;
 }
-
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -47,35 +43,29 @@ body {
     top: 0;
     z-index: 1000;
 }
-
 .navbar .logo {
     font-size: 28px;
     font-weight: bold;
-    color: #ff1a1a;
-    text-shadow: 0 0 10px rgba(255, 26, 26, 0.8);
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
-
 .navbar .menu {
     list-style-type: none;
     display: flex;
     margin-right: 50px;
 }
-
 .navbar .menu li {
     margin-left: 20px;
 }
-
 .navbar .menu li a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
 }
-
 .navbar .menu li a:hover {
     text-decoration: underline;
 }
-
 .menu-toggle {
     display: block;
     font-size: 30px;
@@ -86,7 +76,6 @@ body {
     top: 50%;
     transform: translateY(-50%);
 }
-
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -94,21 +83,20 @@ body {
     width: 250px;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 20px;
-    box-shadow: 0 0 10px red;
+    box-shadow: 0 0 10px white;
     z-index: 1001;
+    overflow-y: auto;
     text-align: center;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
-
 .dropdown-menu.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
-
 .dropdown-menu a {
     display: block;
     color: #fff;
@@ -117,17 +105,13 @@ body {
     font-weight: 500;
     margin: 20px 0;
 }
-
 .dropdown-menu a:hover {
     text-decoration: underline;
 }
-
 a:focus, a:active {
     outline: none;
     background: transparent;
 }
-
-/* Hero section */
 .hero {
     display: flex;
     flex-direction: column;
@@ -135,26 +119,21 @@ a:focus, a:active {
     justify-content: center;
     height: calc(100vh - 80px);
     text-align: center;
+    color: #000;
     padding-top: 80px;
-    color: #fff;
 }
-
 .hero h1 {
     font-size: 64px;
-    text-shadow: 0 0 25px rgba(255, 26, 26, 0.9);
-    color: #ff1a1a;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
-
 .hero p {
     font-size: 24px;
     margin-top: 10px;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
 }
-
-/* Button */
 .btn {
     padding: 15px 30px;
-    background-color: #ff1a1a;
+    background-color: #28a745;
     border: 2px solid white;
     color: #fff;
     border-radius: 5px;
@@ -163,26 +142,24 @@ a:focus, a:active {
     text-decoration: none;
     transition: box-shadow 0.3s ease;
 }
-
 .btn:hover {
-    box-shadow: 0 0 15px #ff1a1a;
+    box-shadow: 0 0 15px white;
 }
-
-/* Sections */
-.overview, .features, .credits, .help {
+.overview {
     padding: 50px;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
 }
-
 .features {
+    padding: 50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.8);
 }
-
 .features .feature-item {
     display: flex;
     flex-direction: column;
@@ -190,103 +167,137 @@ a:focus, a:active {
     width: 30%;
     margin: 20px;
 }
-
 .features .feature-item img {
     width: 150px;
     height: 100px;
     transition: transform 0.3s ease;
 }
-
 .features .feature-item:hover img {
-    transform: translateY(-10px);
+    transform: translateX(-10px);
 }
-
-.features .feature-item p {
+.features .feature-item h3 {
     margin-top: 10px;
 }
-
+.features .feature-item p {
+    margin-top: 5px;
+}
+.credits {
+    padding: 50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+.help {
+    padding: 50px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+.help .btn-help {
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease;
+}
+.help .btn-help:hover {
+    box-shadow: 0 0 15px white;
+}
 @media (max-width: 768px) {
-    .navbar .menu { display: none; }
-    .menu-toggle { display: block; }
-    .dropdown-menu { width: 100%; right: 0; top: 60px; }
-    .features .feature-item { width: 100%; margin: 10px 0; }
+    .navbar .menu {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .dropdown-menu {
+        display: block;
+        width: 100%;
+        right: 0;
+        top: 60px;
+    }
+    .dropdown-menu a {
+        margin: 10px;
+    }
+    .features .feature-item {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
 </style>
 </head>
 <body>
 
-<!-- Video background -->
 <video autoplay muted loop class="video-background">
 <source src="https://github.com/localgoth/localgoth.github.io/blob/main/src/Moving%20White%20Particles%20Overlay%20For%20Edit%20%5B4K%5D.mp4?raw=true" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 
-<!-- Navbar -->
 <div class="navbar">
 <div class="logo">Omega Beams</div>
 <div class="menu-toggle">&#8801;</div>
 <ul class="menu">
 <li><a href="#home">Home</a></li>
-<li><a href="https://discord.com/oauth2/authorize?client_id=1273568705892188211">Authorize</a></li>
-<li><a href="https://discord.gg/ZFWR7ETVBf">Support</a></li>
-<li><a href="https://e-boys.online/verify">Get Key</a></li>
+<li><a href="https://logged.tg/u/omegabeams">Dashboard</a></li>
+<li><a href="https://discord.gg/Y7Pwfjyked">Community</a></li>
+<li><a href="https://omegabeam-hyperlink.netlify.app/">Hyperlink</a></li>
 </ul>
 <div class="dropdown-menu">
 <a href="#home">Home</a>
-<a href="https://discord.com/oauth2/authorize?client_id=1273568705892188211">Add to Server</a>
-<a href="https://discord.gg/ZFWR7ETVBf">Support</a>
-<a href="https://e-boys.online/verify">Get Key</a>
+<a href="https://logged.tg/u/omegabeams">Dashboard</a>
+<a href="https://discord.gg/Y7Pwfjyked">Community</a>
+<a href="https://omegabeam-hyperlink.netlify.app/">Hyperlink</a>
 </div>
 </div>
 
-<!-- Hero -->
 <div class="hero">
 <h1>Welcome to Omega Beams</h1>
-<p>The #1 platform for secure and lightning-fast beaming</p>
-<a href="https://e-boys.online/verify" class="btn">Get Key</a>
+<p>Join the most powerful 1# beaming site online</p>
+<a href="https://logged.tg/u/omegabeams" class="btn" style="background-image: url('https://github.com/localgoth/localgoth.github.io/blob/main/src/PhantomBotButtonBackgrounds.png?raw=true');">Verify Access</a>
 </div>
 
-<!-- Overview -->
 <div class="overview">
-<h2>Overview</h2>
-<p>Omega Beams is built for performance, protection, and reliability.<br>
-Experience blazing speed and unmatched control — all through our intuitive and sleek dashboard.<br>
-We deliver top-tier features trusted by thousands of users worldwide.</p>
+<h2>About Omega Beams</h2>
+<p>Omega Beams connects users through innovative and secure systems.<br>
+Access the dashboard, beam accounts, and experience high speed performance.<br>
+Built with precision and reliability for the ultimate user experience.</p>
 </div>
 
-<!-- Features -->
 <div class="features">
-<h2>Features</h2>
+<h2>Core Features</h2>
 <div class="feature-item">
 <img src="https://github.com/localgoth/localgoth.github.io/blob/main/src/WrenchAndHammerRevamp.png?raw=true" alt="Feature 1">
-<p>Smart Dashboard</p>
+<p>Best Tools To Use</p>
 </div>
 <div class="feature-item">
 <img src="https://github.com/localgoth/localgoth.github.io/blob/main/src/ShieldIconRevampv.2.png?raw=true" alt="Feature 2">
-<p>Full Security</p>
+<p>Secured and Safe</p>
 </div>
 <div class="feature-item">
 <img src="https://github.com/localgoth/localgoth.github.io/blob/main/src/FastIconRevampWhite.png?raw=true" alt="Feature 3">
-<p>Ultra Fast Processing</p>
+<p>Ultra Fast And Easy</p>
 </div>
 </div>
 
-<!-- Credits -->
 <div class="credits">
 <h2>Credits</h2>
-<p>Developed with passion by the Omega Team.</p>
+<p>Built by ToriTreat and AlmostReal.<br>
+Special thanks to everyone supporting the project.</p>
 </div>
 
-<!-- Help -->
 <div class="help">
 <h2>Need Help?</h2>
-<p>Our support team is ready to assist you 24/7. Click below to get connected.</p>
-<a href="https://discord.gg/ZFWR7ETVBf" class="btn">Contact Support</a>
+<p>Have questions or need assistance? Reach out to our community support below.</p>
+<a href="https://discord.gg/Y7Pwfjyked" class="btn" style="background-image: url('https://github.com/localgoth/localgoth.github.io/blob/main/src/PhantomBotButtonBackgrounds.png?raw=true');">Join Support Server</a>
 </div>
 
 <script>
 document.querySelector('.menu-toggle').addEventListener('click', function() {
-  document.querySelector('.dropdown-menu').classList.toggle('show');
+document.querySelector('.dropdown-menu').classList.toggle('show');
 });
 </script>
 </body>
